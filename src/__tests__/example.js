@@ -1,4 +1,3 @@
-/* eslint-env jest */
-import { test } from '@jest/globals'
-// const { test } = require('@jest/globals')
+// import { test } from '@jest/globals'
+const { test, expect } = require('@jest/globals')
 test('should first', () => {})

@@ -3,6 +3,7 @@ import globals from 'globals'
 import tseslint from 'typescript-eslint'
 import pluginReact from 'eslint-plugin-react'
 import { defineConfig } from 'eslint/config'
+import tsParser from '@typescript-eslint/parser'
 
 export default defineConfig([
     {
@@ -13,6 +14,23 @@ export default defineConfig([
     {
         files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
         languageOptions: { globals: globals.browser },
+    },
+    {
+        files: ['**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+        languageOptions: {
+            globals: {
+                ...globals.jest,
+            },
+        },
+    },
+    // TypeScript ESLint plugin and parser, if you use TS
+    {
+        files: ['**/*.{ts,tsx}'],
+        plugins: { '@typescript-eslint': tseslint },
+        languageOptions: {
+            parser: tsParser,
+        },
+        extends: ['plugin:@typescript-eslint/recommended'],
     },
     tseslint.configs.recommended,
     pluginReact.configs.flat.recommended,
