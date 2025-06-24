@@ -1,3 +1,4 @@
 echo "HUSKY PRE-COMMIT IS RUNNING"
 
 npx lint-staged
+npm test
