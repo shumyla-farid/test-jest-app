@@ -4,9 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "jest",
+        "test": "node --experimental-vm-modules node_modules/.bin/jest",
         "validate": "npm  run lint && npm run test",
-        "lint": "eslint --ignore-path .gitignore .",
+        "lint": "eslint .",
         "format": "prettier --ignore-path .gitignore --write .",
         "prepare": "husky"
     },

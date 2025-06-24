@@ -1,7 +1,7 @@
 import js from '@eslint/js'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
-import pluginReact from 'eslint-plugin-react'
+
 import { defineConfig } from 'eslint/config'
 import tsParser from '@typescript-eslint/parser'
 
@@ -30,8 +30,8 @@ export default defineConfig([
         languageOptions: {
             parser: tsParser,
         },
-        extends: ['plugin:@typescript-eslint/recommended'],
+        // extends: ['plugin:@typescript-eslint/recommended'],
     },
+    { ignores: ['**/node_modules/**', '**/dist/**', '**/build/**'] },
     tseslint.configs.recommended,
-    pluginReact.configs.flat.recommended,
 ])
