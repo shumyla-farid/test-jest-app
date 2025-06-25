@@ -1,0 +1,3 @@
+echo "HUSKY PRE-PUSH IS RUNNING"
+
+npx validate

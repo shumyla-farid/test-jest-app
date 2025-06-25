@@ -14,9 +14,7 @@
         "**/*": "prettier --write --ignore-unknown --loglevel debug"
     },
     "husky": {
-        "hooks": {
-            "pre-push": "npm run validate"
-        }
+        "hooks": {}
     },
     "keywords": [],
     "author": "",
