@@ -11,7 +11,7 @@
         "prepare": "husky"
     },
     "lint-staged": {
-        "**/*": "prettier --write --loglevel debug"
+        "**/*": "prettier --write"
     },
     "husky": {
         "hooks": {
